@@ -20,16 +20,16 @@ function App() {
     <div className="App">
       {books &&
         Object.entries(books).map((bookData: any) => {
-          console.log("BOOL:", bookData);
           const [letter, bookArr] = bookData;
-          console.log("L:", letter, bookArr);
           return (
-            <div>
-              <div>{letter}</div>
-              {bookArr.map((data: IBook) => {
-                return <Book key={data.id} {...data} />;
-              })}
-            </div>
+            <section className="section-container">
+              <h2>{letter}</h2>
+              <div>
+                {bookArr.map((data: IBook) => {
+                  return <Book key={data.id} {...data} />;
+                })}
+              </div>
+            </section>
           );
         })}
     </div>
