@@ -16,13 +16,15 @@ function App() {
         setBooks(json);
       });
   }, []);
-  return (
-    <div className="App">
-      {books &&
-        Object.entries(books).map((bookData: any) => {
+
+  const DisplayBooks = () => {
+    if (!books) return null;
+    return (
+      <>
+        {Object.entries(books).map((bookData: any) => {
           const [letter, bookArr] = bookData;
           return (
-            <section className="section-container">
+            <section key={letter} className="section-container">
               <h2>{letter}</h2>
               <div>
                 {bookArr.map((data: IBook) => {
@@ -32,6 +34,12 @@ function App() {
             </section>
           );
         })}
+      </>
+    );
+  };
+  return (
+    <div className="App">
+      <DisplayBooks />
     </div>
   );
 }
