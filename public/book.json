@@ -1,0 +1,44 @@
+{
+  "A": [
+    {
+      "id": "c3e45f67-89ab-4bcd-ef01-3456789abcde",
+      "title": "Pride and Prejudice",
+      "author": {
+        "firstName": "Jane",
+        "lastName": "Austen"
+      },
+      "year": 1813
+    },
+    {
+      "id": "d8a7b6c5-4321-0987-6543-2109fedcba98",
+      "title": "Watership Down",
+      "author": {
+        "firstName": "Richard",
+        "lastName": "Adams"
+      },
+      "year": 1972
+    }
+  ],
+  "B": [
+    {
+      "id": "89250e97-06ec-40f7-8780-ab2cc690f391",
+      "title": "Fahrenheit 451",
+      "author": {
+        "firstName": "Ray",
+        "lastName": "Bradbury"
+      },
+      "year": 1953
+    }
+  ],
+  "L": [
+    {
+      "id": "c5c28efc-0bdf-4bbd-bc11-512cee6408a2",
+      "title": "To Kill a Mockingbird",
+      "author": {
+        "firstName": "Harper",
+        "lastName": "Lee"
+      },
+      "year": 1960
+    }
+  ]
+}
