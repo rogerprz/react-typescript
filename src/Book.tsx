@@ -14,9 +14,19 @@ export interface IBook {
 export const Book = (props: IBook) => {
   const { id, title, author, year } = props;
   return (
-    <div style={{ padding: 20 }}>
-      <div>Title: {title}</div>
-      <div>First name: {author.firstName}</div>
+    <div
+      style={{
+        padding: 20,
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "flex-start",
+      }}
+    >
+      <h3>Title: {title}</h3>
+      <div>
+        Name: {author.firstName} {author.lastName}
+      </div>
+      <div>SKU: {id}</div>
       <div>year:{year}</div>
     </div>
   );
