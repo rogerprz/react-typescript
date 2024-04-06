@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import { Book, IBook } from "./Book";
+import { BookForm } from "./BookForm";
 
 interface IBookList {
   [key: string]: IBook[];
@@ -20,7 +21,7 @@ function App() {
   const DisplayBooks = () => {
     if (!books) return null;
     return (
-      <>
+      <section className="books-container">
         {Object.entries(books).map((bookData: any) => {
           const [letter, bookArr] = bookData;
           return (
@@ -34,11 +35,12 @@ function App() {
             </section>
           );
         })}
-      </>
+      </section>
     );
   };
   return (
     <div className="App">
+      <BookForm />
       <DisplayBooks />
     </div>
   );
