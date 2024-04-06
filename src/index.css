@@ -12,10 +12,51 @@ code {
     monospace;
 }
 
+.book-form {
+  align-content: center;
+  margin: 40px auto;
+  border: 1px solid rgb(46, 39, 127);
+  border-radius: 5px;
+  width: 80%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+}
+
+input {
+  margin: 5px 0;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+button {
+  width: 50%;
+  margin: 0 auto;
+  padding: 15px;
+  color: white;
+  background: rgb(75, 105, 214);
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 .section-container {
-  width: "100%";
+  width: 100%;
   display: flex;
   flex-direction: column;
   background: rgb(233, 229, 229);
   border: 2px solid black;
+}
+.books-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 70%;
 }
