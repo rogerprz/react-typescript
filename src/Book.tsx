@@ -6,7 +6,7 @@ interface IAuthor {
 }
 
 export interface IBook {
-  id: string;
+  id: string | number;
   title: string;
   author: IAuthor;
   year: number | string;
