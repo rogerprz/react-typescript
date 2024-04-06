@@ -18,6 +18,26 @@ function App() {
       });
   }, []);
 
+  const addBook = (book: IBook) => {
+    setBooks((prev) => {
+      if (prev) {
+        const { author } = book;
+        const firstLetter = author.lastName[0].toUpperCase();
+        if (prev && prev[firstLetter]) {
+          return {
+            ...prev,
+            [firstLetter]: [...prev[firstLetter], book],
+          };
+        } else {
+          return {
+            ...prev,
+            [firstLetter]: [book],
+          };
+        }
+      }
+    });
+  };
+
   const DisplayBooks = () => {
     if (!books) return null;
     return (
@@ -38,9 +58,10 @@ function App() {
       </section>
     );
   };
+  console.log("Books:", books);
   return (
     <div className="App">
-      <BookForm />
+      <BookForm addBook={addBook} />
       <DisplayBooks />
     </div>
   );
